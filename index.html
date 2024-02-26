@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>IMC</title>
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <a href="#home"><li>Home</li></a>
+            <a href="#calculadora-imc"><li>Calculadora IMC</li></a>
+            <a href="#tabela"><li>Tabela IMC</li></a>
+            
+        </ul>
+    </nav>
+
+    <div class="container-home" id="home">
+        <header>
+            <h1>Neste artigo Vamos falar um Pouco sobre o IMC</h1>
+        </header>
+        <div>
+            <h2>O que é o IMC?</h2>
+        </div>
+        <div class="container-sobre">
+            <p>
+                O Índice de Massa Corporal (IMC) é basicamente uma maneira de entender se alguém está com um peso saudável para a sua altura. Você divide o peso da pessoa pelo quadrado da altura dela. Isso dá uma ideia geral se a pessoa está abaixo do peso, dentro do peso normal, com sobrepeso ou obesa.
+                
+                Mas é importante lembrar que o IMC não conta toda a história. Ele não leva em consideração coisas como a quantidade de músculos que alguém tem, onde a gordura está localizada no corpo ou quão saudável alguém é em geral. Então, embora seja útil para começar a entender a saúde, não é a única coisa que importa.
+            </p>
+        </div>
+    </div>
+    <div class="container" id="calculadora-imc">
+       <div class="container-imc">
+        <div class="container-title">
+            <h1>Calcular IMC</h1>
+        </div>
+        <div class="container-altura">
+            <input type="number" id="altura" placeholder="Altura ex: 1.70">
+        </div>
+        <div class="container-peso">
+            <input type="number" id="peso" placeholder="Peso ex: 78.2">
+        </div>
+        <div class="container-button" id="calcular">
+            <button onclick="calcular()">Calcular</button>
+        </div>
+        <div class="container-resultado" >
+            <p id="res"></p>
+        </div>
+       </div>
+    </div>
+    <div class="container-tabela" id="tabela">
+        <div>
+            <h2>Veja Abaixo a Tabela do IMC</h2>
+        </div>
+
+    </div>
+
+    <script src="/assets/js/scripts.js"></script>
+</body>
+</html>
