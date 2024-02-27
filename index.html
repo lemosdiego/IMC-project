@@ -1,62 +1,115 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <title>IMC</title>
-</head>
-<body>
-    <nav class="menu">
-        <ul>
-            <a href="#home"><li>Home</li></a>
-            <a href="#calculadora-imc"><li>Calculadora IMC</li></a>
-            <a href="#tabela"><li>Tabela IMC</li></a>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <title>IMC</title>
+    </head>
+    <body>
+        <nav class="menu">
+            <ul>
+                <a href="#home"><li>Home</li></a>
+                <a href="#calculadora-imc"><li>Calculadora IMC</li></a>
+                <a href="#tabela"><li>Tabela IMC</li></a>
+
+            </ul>
+        </nav>
+
+        <div class="container-home" id="home">
+            <header>
+                <h1 id="title"></h1>
+            </header>
+            <div>
+                <h2 id="subtitle"></h2>
+            </div>
+            <div class="container-sobre">
+                <p id="artigo"></p>
+            </div>
+        </div>
+        <div class="container" id="calculadora-imc">
+            <div class="title-calculadora">
+                <h2>Calculadora de Indice de Massa corporal</h2>
+            </div>
+            <div class="container-imc">
+                <div class="container-title">
+                    <h1>Calcular IMC</h1>
+                </div>
+                <div class="container-altura">
+                    <input type="number" id="altura"
+                        placeholder="Altura ex: 1.70">
+                </div>
+                <div class="container-peso">
+                    <input type="number" id="peso" placeholder="Peso ex: 78.2">
+                </div>
+                <div class="container-button" id="calcular">
+                    <button onclick="calcular()">Calcular</button>
+                </div>
+                <div class="container-resultado">
+                    <p id="res"></p>
+                </div>
+            </div>
+        </div>
+        <div class="container-tabela" id="tabela">
+            <div class="tabela-title">
+                <h2>Veja Abaixo a Tabela do IMC</h2>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <td>IMC</td>
+                        <td>Classificação</td>
+                        <td>Obesidade (GRAU)</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>MENOR QUE 18.5</td>
+                        <td>MAGREZA</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <td>ENTRE 18.5 E 24.9</td>
+                    <td>NORMAL</td>
+                    <td>0</td>
+                </tbody>
+                <tbody>
+                    <td>ENTRE 25.0 E 29.9</td>
+                    <td>SOBREPESO</td>
+                    <td>1</td>
+                </tbody>
+                <tbody>
+                    <td>ENTRE 30.0 E 39.9</td>
+                    <td>OBESIDADE</td>
+                    <td>2</td>
+                </tbody>
+                <tbody>
+                    <td>MAIOR QUE 40</td>
+                    <td>OBESIDADE GRAVE</td>
+                    <td>3</td>
+                </tbody>
+            </table>
             
-        </ul>
-    </nav>
+            <div class="tabela-artigo">
+                <p>A tabela do IMC geralmente é dividida em categorias que indicam o estado de peso de uma pessoa. As categorias comuns são:
 
-    <div class="container-home" id="home">
-        <header>
-            <h1>Neste artigo Vamos falar um Pouco sobre o IMC</h1>
-        </header>
-        <div>
-            <h2>O que é o IMC?</h2>
-        </div>
-        <div class="container-sobre">
-            <p>
-                O Índice de Massa Corporal (IMC) é basicamente uma maneira de entender se alguém está com um peso saudável para a sua altura. Você divide o peso da pessoa pelo quadrado da altura dela. Isso dá uma ideia geral se a pessoa está abaixo do peso, dentro do peso normal, com sobrepeso ou obesa.
-                
-                Mas é importante lembrar que o IMC não conta toda a história. Ele não leva em consideração coisas como a quantidade de músculos que alguém tem, onde a gordura está localizada no corpo ou quão saudável alguém é em geral. Então, embora seja útil para começar a entender a saúde, não é a única coisa que importa.
-            </p>
-        </div>
-    </div>
-    <div class="container" id="calculadora-imc">
-       <div class="container-imc">
-        <div class="container-title">
-            <h1>Calcular IMC</h1>
-        </div>
-        <div class="container-altura">
-            <input type="number" id="altura" placeholder="Altura ex: 1.70">
-        </div>
-        <div class="container-peso">
-            <input type="number" id="peso" placeholder="Peso ex: 78.2">
-        </div>
-        <div class="container-button" id="calcular">
-            <button onclick="calcular()">Calcular</button>
-        </div>
-        <div class="container-resultado" >
-            <p id="res"></p>
-        </div>
-       </div>
-    </div>
-    <div class="container-tabela" id="tabela">
-        <div>
-            <h2>Veja Abaixo a Tabela do IMC</h2>
+                   <ul>
+                    <li>Abaixo do peso: IMC abaixo de 18,5</li>
+                    <li>Peso normal: IMC entre 18,5 e 24,9</li>
+                    <li>Sobrepeso: IMC entre 25 e 29,9</li>
+                    <li>Obesidade: IMC entre 30 e 39,9</li>
+                    <li>Obesidade Grave: IMC acima de 40</li>
+                   </ul>
+
+                <p>No entanto, é importante ressaltar que o IMC é uma medida simplificada e não considera a composição corporal (como a proporção de massa muscular e gordura) nem outros fatores importantes, como distribuição de gordura e características individuais. Por exemplo, uma pessoa musculosa pode ter um IMC mais alto, mesmo estando saudável. Portanto, o IMC deve ser usado como uma ferramenta inicial de triagem e não como uma medida definitiva da saúde de alguém. Sempre é recomendável consultar um profissional de saúde para uma avaliação completa.</p></p>    
+            </div>
         </div>
 
-    </div>
+        <footer>
+           <h1>footer</h1>
+        </footer>
 
-    <script src="/assets/js/scripts.js"></script>
-</body>
+        <script src="/assets/js/scripts.js"></script>
+    </body>
 </html>
