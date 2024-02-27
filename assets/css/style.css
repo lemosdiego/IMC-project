@@ -13,6 +13,64 @@ body{
   
 }
 
+
+.icon-mobile-menu{
+    display: none;
+    
+}
+
+.menu-mobile{
+    display: none;
+}
+
+@media screen and (max-width: 730px) {
+    
+    .menu ul li{
+        display: none;
+    }
+    
+    .menu-mobile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 180px;
+        background: rgb(190, 190, 110);
+        margin-top: 70px;
+     }
+     
+    .menu-mobile ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 1.2rem;
+    }
+  
+    .icon-mobile-menu{
+        display: block;
+        margin-left: 200px;
+       
+    }
+
+    .icon-mobile-menu button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+       
+    }
+
+    .icon-mobile-menu button img{
+        width: 38px;
+        
+    }
+   
+    .open{
+        display: none;
+    }
+
+}
+
+
 .container-home{
     height: 90vh;
     display: flex;
@@ -168,7 +226,7 @@ thead{
 
     .menu{
         width: 100%;
-        height: 100px;
+        height: 70px;
         position: fixed;
         display: flex;
         justify-content: center;
@@ -176,6 +234,7 @@ thead{
         background: rgb(226, 226, 25); 
     }
 
+    
     .container-home{
         display: flex;
         flex-direction: column;
