@@ -1,3 +1,4 @@
+
 const noticia = {
   title: "",
   subtitle: "",
@@ -21,15 +22,28 @@ noticia.artigo = document.querySelector(".paragrafo2");
 noticia.artigo.innerHTML =
   "No entanto, é importante ressaltar que o IMC é uma medidasimplificada e não considera a composição corporal (como a proporção de massa muscular e gordura) nem outros fatores importantes, como distribuição de gordura e características individuais. Por exemplo, uma pessoa musculosa pode ter um IMC mais alto, mesmo estando saudável. Portanto, o IMC deve ser usado como uma ferramenta inicial de triagem e não como uma medida definitiva da saúde de alguém. Sempre é recomendável consultar um profissional de saúde para uma avaliação completa.";
 
-function calcular() {
+
+
+
+  function calcular() {
   let altura = document.getElementById("altura");
   let peso = document.getElementById("peso");
   let res = document.getElementById("res");
   let n1 = Number(altura.value);
   let n2 = Number(peso.value);
-  var imc = n2 / (n1 * n1);
+  let imc = n2 / (n1 * n1);
   res.innerHTML = `Seu Imc é ${imc.toFixed(2)}`;
   res.style.textTransform = "uppercase";
+
+  if (imc < 18.5){
+    res.style.color = 'orange'
+  } else if (imc >= 18.5 && imc <= 24.9){
+    res.style.color = 'green'
+  } else if ( imc >= 25 && imc <= 29.9){
+    res.style.color = 'orange'
+  } else {
+    res.style.color = 'res'
+  }
 }
 
 function menuMobile() {
@@ -40,3 +54,5 @@ function menuMobile() {
     menu.classList.add("open");
   }
 }
+
+

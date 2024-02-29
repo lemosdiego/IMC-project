@@ -20,13 +20,15 @@
                 </button>
             </div>
         </nav>
-        <div class="menu-mobile" id="mobile-menu">
-            <ul>
-                <a href="#home"><li>Home</li></a>
-                <a href="#calculadora-imc"><li>Calculadora IMC</li></a>
-                <a href="#tabela"><li>Tabela IMC</li></a>
+        <div class="container-mobile">
+            <div class="menu-mobile" id="mobile-menu">
+                <ul>
+                    <a href="#home"><li>Home</li></a>
+                    <a href="#calculadora-imc"><li>Calculadora IMC</li></a>
+                    <a href="#tabela"><li>Tabela IMC</li></a>
 
-            </ul>
+                </ul>
+            </div>
         </div>
         <div class="container-home" id="home">
             <header>
@@ -40,8 +42,8 @@
             </div>
         </div>
         <div class="container" id="calculadora-imc">
-            <div class="title-calculadora">
-                <h2 id="calculadora-h2"></h2>
+            <div class="title-calculadora" >
+                <h2 id="calculadora-h2" ></h2>
             </div>
             <div class="container-imc">
                 <div class="container-title">
@@ -55,7 +57,7 @@
                     <input type="number" id="peso" placeholder="Peso ex: 78.2">
                 </div>
                 <div class="container-button" id="calcular">
-                    <button onclick="calcular()">Calcular</button>
+                    <button class="botao" role="button" onclick="calcular()">Calcular</button>
                 </div>
                 <div class="container-resultado">
                     <p id="res"></p>
@@ -78,49 +80,62 @@
                     <tr>
                         <td>MENOR QUE 18.5</td>
                         <td>MAGREZA</td>
-                        <td>0</td>
+                        <td class="laranja">0</td>
                     </tr>
                 </tbody>
                 <tbody>
                     <td>ENTRE 18.5 E 24.9</td>
                     <td>NORMAL</td>
-                    <td>0</td>
+                    <td class="verde">0</td>
                 </tbody>
                 <tbody>
                     <td>ENTRE 25.0 E 29.9</td>
                     <td>SOBREPESO</td>
-                    <td>1</td>
+                    <td class="laranja">1</td>
                 </tbody>
                 <tbody>
                     <td>ENTRE 30.0 E 39.9</td>
                     <td>OBESIDADE</td>
-                    <td>2</td>
+                    <td class="vermelho">2</td>
                 </tbody>
                 <tbody>
                     <td>MAIOR QUE 40</td>
                     <td>OBESIDADE GRAVE</td>
-                    <td>3</td>
+                    <td class="vermelho">3</td>
                 </tbody>
             </table>
 
             <div class="tabela-artigo">
                 <p class="paragrafo1"></p>
-                    <ul class="indices">
-                        <li>Abaixo do peso: IMC abaixo de 18,5</li>
-                        <li>Peso normal: IMC entre 18,5 e 24,9</li>
-                        <li>Sobrepeso: IMC entre 25 e 29,9</li>
-                        <li>Obesidade: IMC entre 30 e 39,9</li>
-                        <li>Obesidade Grave: IMC acima de 40</li>
-                    </ul>
-
-                    <p class="paragrafo2"></p>
+                <ul class="indices">
+                    <li>Abaixo do peso: IMC abaixo de 18,5</li>
+                    <li>Peso normal: IMC entre 18,5 e 24,9</li>
+                    <li>Sobrepeso: IMC entre 25 e 29,9</li>
+                    <li>Obesidade: IMC entre 30 e 39,9</li>
+                    <li>Obesidade Grave: IMC acima de 40</li>
+                </ul>
+                <p class="paragrafo2"></p>
             </div>
         </div>
 
-        <footer>
-            <h1>footer</h1>
+        <footer class="contato">
+
+            <div>
+                <h3>Fale Comigo</h3>
+            </div>
+
+            <div class="logo">
+
+            </div>
+            <div class="logo">
+
+            </div>
+            <div class="logo">
+
+            </div>
         </footer>
 
-        <script src="/assets/js/scripts.js"></script>
+        <script src="/assets/js/scripts.js" ></script>
+        
     </body>
 </html>
